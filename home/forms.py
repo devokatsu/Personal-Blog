@@ -11,3 +11,15 @@ class ArticleForm(forms.ModelForm):
             'content': forms.Textarea(attrs={'class': "form-control", 'placeholder': 'Article Content...'}),
             'img': forms.FileInput(attrs={'class': "form-control"}),
         }
+
+
+class ArticleUpdateForm(forms.ModelForm):
+    class Meta:
+        model = Article
+        fields = ('title', 'content', 'img')
+
+        widgets = {
+            'title': forms.TextInput(attrs={'class': "form-control", 'placeholder': 'Edited Article Title'}),
+            'content': forms.Textarea(attrs={'class': "form-control", 'placeholder': 'Edited Article Content...'}),
+            'img': forms.FileInput(attrs={'class': "form-control", 'placeholder': 'Edited Article Image'}),
+        }
