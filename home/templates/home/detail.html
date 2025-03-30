@@ -26,6 +26,7 @@
                     <div>
                         <a type="button" class=" btn btn-primary " href="{% url 'home' %}">← Back</a>
                         <a type="button" class=" btn btn-warning " href="{% url 'update_article' article.pk %}">Update</a>
+                        <a type="button" class=" btn btn-danger " href="{% url 'delete_article' article.pk %}">Delete</a>
                     </div>
 
                     <!-- Preview image figure-->
