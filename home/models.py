@@ -9,7 +9,7 @@ class Article(models.Model):
     author = models.ForeignKey(User, on_delete=models.CASCADE, null=True, blank=True)
     content = models.TextField()
     created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
+    updated_at = models.DateTimeField(auto_now_add=True)
     img = models.ImageField(upload_to="static/img", null=True, blank=True, default="")
 
 
