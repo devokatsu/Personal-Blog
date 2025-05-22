@@ -7,7 +7,7 @@ from . import settings
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("", include("home.urls")),
-    path('member/', include("django.contrib.auth.urls")),
+    # path('member/', include("django.contrib.auth.urls")),
     path('member/', include('member.urls')),
 
 ]
